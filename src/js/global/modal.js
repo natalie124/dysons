@@ -22,7 +22,7 @@
     { // для модалки купить в клик
       BTN: '.js-buy-click-btn',
       MODAL: '.js-modal-buy-click',
-
+      CALLBACK : 'addInfutAutofocus'
     }
   ];
 

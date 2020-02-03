@@ -2,7 +2,125 @@
   max-width: 1110px;
   width: 100%;
 }
-
 .modal-buy-click__container {
-  padding: 20px;
+  width: 100%;
+  padding: 30px 50px;
+
+  box-sizing: border-box;
 }
+
+.modal-buy-click__title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  margin: 3px 0 13px;
+  padding: 0 0 9px 10px;
+
+  @include font-proxima(36px, 1.2, 700, $black);
+  letter-spacing: 0.005px;
+
+  img {
+    display: block;
+    margin-right: 40px;
+    margin-top: -10px;
+  }
+}
+
+.modal-buy-click__content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  padding-top: 34px;
+  margin-bottom: 24px;
+
+  border-top: 1px solid #efefef;
+}
+
+.modal-buy-click__slider {
+  width: 490px;
+  height: 490px;
+  margin-right: 50px;
+}
+
+.modal-buy-click__form {
+  width: 450px;
+}
+
+.modal-buy-click__name {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  margin: 0 0 10px;
+  padding: 0;
+
+  span {
+    margin-bottom: 10px;
+
+    @include font-proxima(24px, 1.2, 700, $black);
+
+    &:first-child {
+      @include font-proxima(48px, 1, 700, $black);
+    }
+  }
+}
+
+.modal-buy-click__article {
+  margin: 0 0 23px;
+  padding: 0;
+
+  @include font-proxima(18px, 1.2, 400, #999999);
+  letter-spacing: 0.01em;
+}
+
+.modal-buy-click__form form {
+
+}
+
+.modal-buy-click__bottom {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  margin-top: 7px;
+}
+
+.modal-buy-click__text {
+  width: 100%;
+  margin:  0 0 15px;
+  padding: 0;
+
+  @include font-proxima(15px, 24px, 400, $black);
+}
+
+.modal-buy-click__price {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-right: 35px;
+}
+
+.modal-buy-click__old-cost {
+  margin: 0 0 10px;
+
+  @include font-proxima(24px, 1.2, 400, $fuchsia);
+  text-decoration: line-through;
+}
+
+.modal-buy-click__cost {
+  margin: 0;
+  padding: 0;
+
+  @include font-proxima(36px, 1.2, 700, $black);
+}
+
+.modal-buy-click__btn {
+  margin-top: auto;
+}
+

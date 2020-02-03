@@ -1,0 +1,66 @@
+.input-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  label {
+    @include font-proxima(14px, 24px, 400, #888787);
+    margin-bottom: 5px;
+
+    cursor: pointer;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px 20px;
+    margin-bottom: 13px;
+
+    @include font-proxima(18px, 24px, 400, #888787);
+
+    border: 2px solid #ebebeb;
+    background-color: $white;
+
+    transition-property: border-color;
+    transition-duration: 0.3s;
+
+    outline: none;
+    appearance: none;
+
+    &::-ms-clear {
+      display: none;
+    }
+
+    &::-ms-reveal {
+      display: none;
+    }
+
+    &::-webkit-credentials-auto-fill-button,
+    &::-webkit-caps-lock-indicator {
+      visibility: hidden;
+      pointer-events: none;
+      position: absolute;
+      right: 0;
+    }
+
+    &:hover {
+      border-color: #d2cccc;
+
+      transition-property: border-color;
+      transition-duration: 0.3s;
+    }
+
+    &:focus {
+      border-color: $fuchsia;
+
+      transition-property: border-color;
+      transition-duration: 0.3s;
+    }
+  }
+
+  textarea {
+    min-height: 87px;
+    resize: none;
+  }
+}

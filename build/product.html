@@ -148,7 +148,8 @@
     <div class="product-content">
   <div class="product-content__wrapper content-wrapper">
     <div class="product-content__presentation presentation">
-  <div class="presentation__gallery photo-gallery">
+  <div class="presentation__gallery">
+    <div class="presentation__gallery photo-gallery">
   <div class="photo-gallery__top">
     <ul class="photo-gallery__top-list swiper-wrapper">
       <li class="photo-gallery__top-item swiper-slide">
@@ -197,6 +198,7 @@
   <button type="button" class="photo-gallery__nav photo-gallery__nav--next"></button>
 </div>
 
+  </div>
   <section class="presentation__info product-info">
   <div class="product-info__top">
     <p class="product-info__article">
@@ -205,7 +207,6 @@
     </p>
     <p class="product-info__availability">
       <span class="product-info__availability-status product-info__availability-status--on">В наличии</span>
-      <!-- <span class="product-info__availability-status product-info__availability-status--off">Нет в наличии</span> -->
     </p>
   </div>
   <div class="product-info__parameters">
@@ -254,7 +255,7 @@
 
 </div>
 
-    <div class="product-content__description js-tab-switch">
+    <div class="product-content__description description js-tab-switch">
   <div class="description__controls js-controls">
     <form>
       <div class="description__btn">
@@ -370,7 +371,7 @@
 
   </div>
   <div class="description__content js-hide js-switch-item js-product-description-characteristic">
-    <div class="parameters">
+    <div class="product-info">
       <div class="product-info__parameters">
     <h2 class="product-info__title">Характеристики</h2>
     <ul class="product-info__list">
@@ -498,63 +499,108 @@
       <span class="visually-hidden">Закрыть</span>
     </button>
     <div class="modal__container modal-buy-click__container">
-      <div class="modal__content modal-buy-click__content">
-        <h2 class="modal-buy-click__title">Купить в 1 клик</h2>
-        <div class="modal-buy-click__content">
-          <div class="modal-buy-click__slider">
-            <div class="photo-gallery">
-              <div class="photo-gallery__top">
-                <ul class="photo-gallery__top-list swiper-wrapper">
-                  <li class="photo-gallery__top-item swiper-slide">
-                    <img class="cover" src="img/slides/photo-big-1.png" alt="photo" title="photo" width="572" height="572">
-                  </li>
-                  <li class="photo-gallery__top-item swiper-slide">
-                    <img class="cover" src="img/slides/photo-big-1.png" alt="photo" title="photo" width="572" height="572">
-                  </li>
-                  <li class="photo-gallery__top-item swiper-slide">
-                    <img class="cover" src="img/slides/photo-big-1.png" alt="photo" title="photo" width="572" height="572">
-                  </li>
-                  <li class="photo-gallery__top-item swiper-slide">
-                    <img class="cover" src="img/slides/photo-big-1.png" alt="photo" title="photo" width="572" height="572">
-                  </li>
-                  <li class="photo-gallery__top-item swiper-slide">
-                    <img class="cover" src="img/slides/photo-big-1.png" alt="photo" title="photo" width="572" height="572">
-                  </li>
-                  <li class="photo-gallery__top-item swiper-slide">
-                    <img class="cover" src="img/slides/photo-big-1.png" alt="photo" title="photo" width="572" height="572">
-                  </li>
-                </ul>
-              </div>
-              <div class="photo-gallery__thumbs">
-                <ul class="photo-gallery__thumbs-list swiper-wrapper">
-                  <li class="photo-gallery__thumbs-item swiper-slide">
-                    <img src="img/slides/photo-small-1.png" alt="photo" title="photo" class="cover" width="120" height="120">
-                  </li>
-                  <li class="photo-gallery__thumbs-item swiper-slide">
-                    <img src="img/slides/photo-small-2.png" alt="photo" title="photo" class="cover" width="120" height="120">
-                  </li>
-                  <li class="photo-gallery__thumbs-item swiper-slide">
-                    <img src="img/slides/photo-small-3.png" alt="photo" title="photo" class="cover" width="120" height="120">
-                  </li>
-                  <li class="photo-gallery__thumbs-item swiper-slide">
-                    <img src="img/slides/photo-small-1.png" alt="photo" title="photo" class="cover" width="120" height="120">
-                  </li>
-                  <li class="photo-gallery__thumbs-item swiper-slide">
-                    <img src="img/slides/photo-small-2.png" alt="photo" title="photo" class="cover" width="120" height="120">
-                  </li>
-                  <li class="photo-gallery__thumbs-item swiper-slide">
-                    <img src="img/slides/photo-small-3.png" alt="photo" title="photo" class="cover" width="120" height="120">
-                  </li>
-                </ul>
-              </div>
-              <button type="button" class="photo-gallery__nav photo-gallery__nav--prev"></button>
-              <button type="button" class="photo-gallery__nav photo-gallery__nav--next"></button>
+      <h2 class="modal-buy-click__title">
+        <img src="img/bag.svg" alt="Купить в один клик" width="30" height="40">
+        Купить в 1 клик
+      </h2>
+      <div class="modal-buy-click__content">
+        <div class="modal-buy-click__slider">
+          <div class="photo-gallery">
+            <div class="photo-gallery__top">
+              <ul class="photo-gallery__top-list swiper-wrapper">
+                <li class="photo-gallery__top-item swiper-slide">
+                  <img src="img/slides/photo-big-1.png" alt="photo" title="photo" width="572" height="572">
+                </li>
+                <li class="photo-gallery__top-item swiper-slide">
+                  <img src="img/slides/photo-big-1.png" alt="photo" title="photo" width="572" height="572">
+                </li>
+                <li class="photo-gallery__top-item swiper-slide">
+                  <img src="img/slides/photo-big-1.png" alt="photo" title="photo" width="572" height="572">
+                </li>
+                <li class="photo-gallery__top-item swiper-slide">
+                  <img src="img/slides/photo-big-1.png" alt="photo" title="photo" width="572" height="572">
+                </li>
+                <li class="photo-gallery__top-item swiper-slide">
+                  <img src="img/slides/photo-big-1.png" alt="photo" title="photo" width="572" height="572">
+                </li>
+                <li class="photo-gallery__top-item swiper-slide">
+                  <img src="img/slides/photo-big-1.png" alt="photo" title="photo" width="572" height="572">
+                </li>
+              </ul>
             </div>
+            <div class="photo-gallery__thumbs">
+              <ul class="photo-gallery__thumbs-list swiper-wrapper">
+                <li class="photo-gallery__thumbs-item swiper-slide">
+                  <img src="img/slides/photo-small-1.png" alt="photo" title="photo" width="120" height="120">
+                </li>
+                <li class="photo-gallery__thumbs-item swiper-slide">
+                  <img src="img/slides/photo-small-2.png" alt="photo" title="photo" width="120" height="120">
+                </li>
+                <li class="photo-gallery__thumbs-item swiper-slide">
+                  <img src="img/slides/photo-small-3.png" alt="photo" title="photo" width="120" height="120">
+                </li>
+                <li class="photo-gallery__thumbs-item swiper-slide">
+                  <img src="img/slides/photo-small-1.png" alt="photo" title="photo" width="120" height="120">
+                </li>
+                <li class="photo-gallery__thumbs-item swiper-slide">
+                  <img src="img/slides/photo-small-2.png" alt="photo" title="photo" width="120" height="120">
+                </li>
+                <li class="photo-gallery__thumbs-item swiper-slide">
+                  <img src="img/slides/photo-small-3.png" alt="photo" title="photo" width="120" height="120">
+                </li>
+              </ul>
+            </div>
+            <button type="button" class="photo-gallery__nav photo-gallery__nav--prev"></button>
+            <button type="button" class="photo-gallery__nav photo-gallery__nav--next"></button>
           </div>
+        </div>
+        <div class="modal-buy-click__form">
+          <h3 class="modal-buy-click__name">
+            <span>Стайлер Dyson Airwrap</span>
+            <span>для волос complete 8 насадок + чехол</span>
+          </h3>
+          <p class="modal-buy-click__article">
+            <span>Артикул: </span>
+            <span>123456</span>
+          </p>
+          <form action="#" method="post">
+            <div class="input-item">
+              <label for="modal-buy-click-name">Ваше имя</label>
+              <input type="text" id="modal-buy-click-name" name="name" required="">
+            </div>
+            <div class="input-item">
+              <label for="modal-buy-click-phone">Телефон</label>
+              <input type="tel" id="modal-buy-click-phone" name="phone" required="">
+            </div>
+            <div class="input-item">
+              <label for="modal-buy-click-address">Адрес</label>
+              <textarea name="address" id="modal-buy-click-address" required=""></textarea>
+            </div>
+            <div class="modal-buy-click__bottom">
+              <p class="modal-buy-click__text">Стоимость товара</p>
+              <div class="modal-buy-click__price">
+                <p class="modal-buy-click__old-cost">
+                  <span>200 900</span>
+                  <span> руб.</span>
+                </p>
+                <p class="modal-buy-click__cost">
+                  <span>20 900</span>
+                  <span> руб.</span>
+                </p>
+              </div>
+              <button type="submit" class="modal-buy-click__btn button button--small button">
+                <svg width="26" height="23">
+                  <use xlink:href="#icon-cart-small"></use>
+                </svg>
+                <span>Купить</span>
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
-</div></section>
+  </div>
+</section>
 
   <script src="js/vendor.js"></script>
   <script src="js/script.js"></script>

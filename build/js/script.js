@@ -152,6 +152,28 @@
 })();
 
 (function() {
+
+  var telInputs = document.querySelectorAll('input[type="tel"]');
+
+  Array.prototype.forEach.call(telInputs, function(it) {
+    var phoneMask = new IMask(it, {
+      mask: '+7(000)000-00-00'
+    });
+  });
+
+  window.addInfutAutofocus = function() {
+    var input = document.querySelector('form input[type]:not([type="checkbox"]):not([type="radio"]):not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="range"]):not([type="file"]):not([type="image"])');
+    if (!input) {
+      return;
+    }
+
+    console.log(input);
+    input.focus();
+  }
+
+})();
+
+(function() {
   var modals = document.querySelectorAll('.js-modal');
   var hideClass = 'js-hide';
 
@@ -175,7 +197,7 @@
     { // для модалки купить в клик
       BTN: '.js-buy-click-btn',
       MODAL: '.js-modal-buy-click',
-
+      CALLBACK : 'addInfutAutofocus'
     }
   ];
 
@@ -308,7 +330,7 @@
         watchSlidesVisibility: true,
         watchSlidesProgress: true,
         observer: true,
-        observeParents: true,
+        observeParents: true
       });
       var galleryTop = new Swiper(sliderTop, {
         spaceBetween: 10,
@@ -327,40 +349,6 @@
   }
 
   activateSliders();
-})();
-
-(function() {
-  // для слайдеров в попапе 1 клик
-
-  // window.sliderBuyOneClickActivate = function() {
-  //   var slider = document.querySelector('.modal-buy-click .photo-gallery');
-  //   var sliderThumbs = slider.querySelector('.modal-buy-click .photo-gallery__thumbs');
-  //   var sliderTop = slider.querySelector('.modal-buy-click .photo-gallery__top');
-  //   var next = slider.querySelector('.modal-buy-click .photo-gallery__nav--next');
-  //   var prev = slider.querySelector('.modal-buy-click .photo-gallery__nav--prev');
-
-  //   console.log(sliderTop);
-
-  //   var galleryThumbs = new Swiper(sliderThumbs, {
-  //     spaceBetween: 5.05,
-  //     slidesPerView: 4,
-  //     freeMode: true,
-  //     watchSlidesVisibility: true,
-  //     watchSlidesProgress: true
-  //   });
-  //   var galleryTop = new Swiper(sliderTop, {
-  //     spaceBetween: 10,
-  //     // effect: 'fade',
-  //     navigation: {
-  //       nextEl: next,
-  //       prevEl: prev,
-  //     },
-  //     thumbs: {
-  //       swiper: prev
-  //     }
-  //   });
-  // }
-
 })();
 
 (function() {

@@ -47,7 +47,7 @@
         watchSlidesVisibility: true,
         watchSlidesProgress: true,
         observer: true,
-        observeParents: true,
+        observeParents: true
       });
       var galleryTop = new Swiper(sliderTop, {
         spaceBetween: 10,
@@ -66,38 +66,4 @@
   }
 
   activateSliders();
-})();
-
-(function() {
-  // для слайдеров в попапе 1 клик
-
-  // window.sliderBuyOneClickActivate = function() {
-  //   var slider = document.querySelector('.modal-buy-click .photo-gallery');
-  //   var sliderThumbs = slider.querySelector('.modal-buy-click .photo-gallery__thumbs');
-  //   var sliderTop = slider.querySelector('.modal-buy-click .photo-gallery__top');
-  //   var next = slider.querySelector('.modal-buy-click .photo-gallery__nav--next');
-  //   var prev = slider.querySelector('.modal-buy-click .photo-gallery__nav--prev');
-
-  //   console.log(sliderTop);
-
-  //   var galleryThumbs = new Swiper(sliderThumbs, {
-  //     spaceBetween: 5.05,
-  //     slidesPerView: 4,
-  //     freeMode: true,
-  //     watchSlidesVisibility: true,
-  //     watchSlidesProgress: true
-  //   });
-  //   var galleryTop = new Swiper(sliderTop, {
-  //     spaceBetween: 10,
-  //     // effect: 'fade',
-  //     navigation: {
-  //       nextEl: next,
-  //       prevEl: prev,
-  //     },
-  //     thumbs: {
-  //       swiper: prev
-  //     }
-  //   });
-  // }
-
 })();
