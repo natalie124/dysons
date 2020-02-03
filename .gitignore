@@ -1,0 +1,14 @@
+.directory
+.DS_Store
+.idea
+.vscode
+*.ai
+*.log
+*.pdf
+*.psd
+*.sublime*
+node_modules/
+npm-debug.*
+Thumbs.db
+tmpnodejsnpm-cache/
+pixelperfect/

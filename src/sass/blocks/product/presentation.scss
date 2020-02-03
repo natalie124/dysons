@@ -1,0 +1,19 @@
+.presentation {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.presentation__gallery {
+  width: 50%;
+  margin: 0 6.8% 70px 0;
+}
+
+.presentation__info {
+  width: 43.2%;
+  margin-bottom: 70px;
+}

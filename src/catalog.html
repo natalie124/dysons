@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Dysons | Уход за волосами</title>
+  <meta name="description" content="Магазин Dysons. Фены, стайлеры, пылесосы, увлажнители. Гарантия. Доставка.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preload" href="fonts/ProximaNova-Regular.woff2" as="font" crossorigin>
+  <link rel="preload" href="fonts/ProximaNova-Bold.woff2" as="font" crossorigin>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <div style="display:none">
+    <include src="build/img/icons/sprite.svg"></include>
+  </div>
+  <include src="src/components/header/page-header.html"></include>
+  <include src="src/components/pagination/pagination-catalog.html"></include>
+
+  <main>
+    <include src="src/components/content-header/content-header-catalog.html"></include>
+    <include src="src/components/cards-content/cards-content-catalog.html"></include>
+    <include src="src/components/advantages.html"></include>
+  </main>
+  <include src="src/components/footer/page-footer.html"></include>
+  <include src="src/components/modal/modal-add.html"></include>
+  <script src="js/vendor.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+.product-overview {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap;
+
+  width: 100%;
+  margin-bottom: 82px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.product-overview__media {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+
+  width: 43%;
+  min-width: 400px;
+  margin-right: 6.5%;
+}
+
+.product-overview__video {
+  position: relative;
+
+  width: 100%;
+  padding-bottom: 60.4%;
+
+  border-radius: 2px;
+  box-shadow: 0px 0px 20px 0px rgba(83, 23, 98, 0.23);
+
+  overflow: hidden;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border: none;
+  }
+}
+
+.product-overview__video-poster {
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  width: 100%;
+  height: 100%;
+
+  &:hover .product-overview__media-btn,
+  &:focus .product-overview__media-btn {
+    background-color: $fuchsia;
+
+    transition-property: background-color;
+    transition-duration: 0.3s;
+
+    &:after {
+      border-left-color: $white;
+
+      transition-property: border-left-color;
+      transition-duration: 0.3s;
+    }
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.product-overview__media-btn {
+  position: absolute;
+  z-index: 20;
+  top: calc(50% - 47px);
+  left: calc(50% - 56px);
+
+  width: 112px;
+  height: 112px;
+
+  border-radius: 50%;
+  border: none;
+  background-color: $white;
+
+  transition-property: background-color;
+  transition-duration: 0.3s;
+
+  outline: none;
+
+  &::after {
+    position: absolute;
+    top: 29px;
+    left: 43px;
+
+    border: 27px solid transparent;
+    border-left: 37px solid $fuchsia;
+
+    transition-property: border-left-color;
+    transition-duration: 0.3s;
+
+    content: "";
+  }
+}
+
+.product-overview__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  width: 50.5%;
+}
+
+.product-overview__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  width: 100%;
+  margin: 0 0 30px;
+  padding: 40px 0 0 0;
+
+  @include font-proxima(30px, 1.2, 700, #0f0f0f);
+  text-decoration: none;
+  letter-spacing: 0.005em;
+}
+
+.product-overview__text {
+  width: 100%;
+  margin: 0 0 15px;
+  padding: 0;
+
+  @include font-proxima(17px, 24px, 300, #4f4e4e);
+  text-decoration: none;
+  letter-spacing: 0.005em;
+}

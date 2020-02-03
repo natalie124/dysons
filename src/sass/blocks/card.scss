@@ -1,0 +1,229 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  min-width: 280px;
+  max-width: 285px;
+  width: 100%;
+  padding: 24px;
+
+  border: 1px solid transparent;
+
+  transition-property: border-color;
+  transition-duration: 0.3s;
+
+  &:hover {
+    border-color: $fuchsia;
+
+    transition-property: border-color;
+    transition-duration: 0.3s;
+
+    .card__detail {
+      opacity: 1;
+
+      transition-property: opacity;
+      transition-duration: 0.3s;
+    }
+
+    .card__cart {
+      background-color: $fuchsia;
+
+      transition-property: border-color;
+      transition-duration: 0.3s;
+
+      svg {
+        fill: $white;
+
+        transition-property: fill;
+        transition-duration: 0.3s;
+        will-change: fill;
+      }
+    }
+  }
+}
+
+.card__img {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 275px;
+  margin-bottom: 34px;
+
+
+  overflow: hidden;
+
+  &:hover,
+  &:focus {
+    img {
+      opacity: 0.8;
+
+      transition-property: opacity;
+      transition-duration: 0.3s;
+    }
+  }
+
+  &:active {
+    img {
+      opacity: 0.3;
+
+      transition-property: opacity;
+      transition-duration: 0.3s;
+    }
+  }
+
+  img {
+    display: block;
+
+    vertical-align: bottom;
+    line-height: 100%;
+    object-fit: contain;
+
+    transition-property: opacity;
+    transition-duration: 0.3s;
+  }
+}
+
+.card__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  width: 100%;
+  padding-bottom: 8px;
+}
+
+.card__category {
+  width: 100%;
+
+  @include font-proxima(18px, 1.2, 400, $violet);
+  text-decoration: none;
+
+  transition-property: opacity;
+  transition-duration: 0.3s;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    transition-property: opacity;
+    transition-duration: 0.3s;
+  }
+}
+
+.card__title {
+  width: 100%;
+
+  @include font-proxima(24px, 30px, 400, #0f0f0f);
+  text-decoration: none;
+
+  transition-property: opacity;
+  transition-duration: 0.3s;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    transition-property: opacity;
+    transition-duration: 0.3s;
+  }
+}
+
+.card__price {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-self: flex-end;
+
+  width: 100%;
+  margin-top: auto;
+
+  border-top: 1px solid #cccccc;
+}
+
+.card__old-cost {
+  margin-right: 13px;
+
+  @include font-proxima(18px, 1.2, 700, $fuchsia);
+  text-decoration: line-through;
+}
+
+.card__cost {
+  margin-right: 13px;
+
+  @include font-proxima(20px, 1.2, 700, #0f0f0f);
+}
+
+.card__cart {
+  margin: 0 0 0 auto;
+  padding: 14px;
+
+  border: none;
+  background-color: transparent;
+
+  transition-property: background-color, opacity;
+  transition-duration: 0.3s;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+
+    transition-property: opacity;
+    transition-duration: 0.3s;
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    transition-property: opacity;
+    transition-duration: 0.3s;
+  }
+
+  svg {
+    fill: $fuchsia;
+
+    transition-property: fill;
+    transition-duration: 0.3s;
+    will-change: fill;
+  }
+}
+
+.card__detail {
+  @include font-proxima(15px, 1.2, 400, #0f0f0f);
+
+  opacity: 0;
+
+  transition-property: opacity, color;
+  transition-duration: 0.3s, 0.3s;
+
+  &:hover,
+  &:focus {
+    color: $fuchsia;
+
+    transition-property: color;
+    transition-duration: 0.3;
+  }
+
+  &:active {
+    color: $fuchsia-dark;
+
+    transition-property: color;
+    transition-duration: 0.3;
+  }
+}

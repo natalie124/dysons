@@ -1,0 +1,55 @@
+.page-footer {
+  width: 100%;
+}
+
+.page-footer__top {
+  width: 100%;
+  padding: 8px 0;
+
+  background-color: #1c1c1c;
+}
+
+.page-footer__menu {
+  margin-bottom: 22px;
+}
+
+.page-footer__bottom {
+  width: 100%;
+
+  background-color: #282828;
+}
+
+.page-footer__copyright {
+  padding: 47px 0;
+}
+
+.page-footer__copyright-container {
+  margin: 0 5.4%;
+}
+
+.page-footer__copyright-text,
+.page-footer__copyright-link {
+  margin: 0;
+  padding: 0;
+
+  @include font-proxima(16px, 1.2, 400, #aeaeae);
+}
+
+.page-footer__copyright-link {
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $white;
+
+    transition-property: color;
+    transition-duration: 0.3s;
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    transition-property: opacity;
+    transition-duration: 0.3s;
+  }
+}

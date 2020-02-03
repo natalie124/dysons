@@ -1,0 +1,198 @@
+.page-header {
+  width: 100%;
+
+  background-color: $white;
+
+  &--dark {
+    .page-header__bottom {
+      background-color: #000000;
+    }
+  }
+}
+
+.page-header__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+
+  width: 100%;
+  padding: 17px 18px 8px;
+  background-color: $white;
+}
+
+.page-header__bottom {
+  position: relative;
+
+  background-color: $white;
+}
+
+.page-header__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  margin: 0 15px;
+
+  &--logo {
+    margin-right: 74px;
+  }
+
+  &--contacts {
+    min-width: 28%;
+    margin-top: 11px;
+    margin-right: 20px;
+  }
+
+  &--links {
+    margin-top: 16px;
+  }
+}
+
+.page-header__logo {
+  @include font-proxima(36px, 1.2, 700, $fuchsia);
+  text-decoration: none;
+
+  transition-property: color;
+  transition-duration: 0.3s;
+
+  &:hover,
+  &:focus {
+    color: $fuchsia-dark;
+
+    transition-property: color;
+    transition-duration: 0.3s;
+  }
+
+  &:active {
+    color: $fuchsia-light;
+
+    transition-property: color;
+    transition-duration: 0.3s;
+  }
+}
+
+.page-header__phone {
+  @include font-proxima(24px, 1.2, 400, #080808);
+  text-decoration: none;
+
+  transition-property: opacity;
+  transition-duration: 0.3s;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    transition-property: opacity;
+    transition-duration: 0.3s;
+  }
+}
+
+.page-header__link {
+  @include font-proxima(18px, 1.2, 400, $fuchsia);
+  text-decoration: none;
+
+  transition-property: color;
+  transition-duration: 0.3s;
+
+  &:hover,
+  &:focus {
+    color: $fuchsia-dark;
+    text-decoration: underline;
+
+    transition-property: color;
+    transition-duration: 0.3s;
+  }
+
+  &:active {
+    color: $fuchsia-light;
+
+    transition-property: color;
+    transition-duration: 0.3s;
+  }
+}
+
+.page-header__cart {
+  position: relative;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+
+  min-height: 45px;
+  padding-right: 11px;
+  padding-top: 6px;
+  margin-right: 17px;
+  margin-top: 10px;
+
+  @include font-proxima(18px, 1.2, 400, #080808);
+  text-decoration: none;
+
+  transition-property: opacity, color;
+  transition-duration: 0.3s;
+
+  &:hover,
+  &:focus {
+    p {
+      color: $fuchsia-dark;
+      text-decoration: underline;
+
+      transition-property: color;
+      transition-duration: 0.3s;
+    }
+
+    span {
+      color: $fuchsia-light;
+
+      transition-property: color;
+      transition-duration: 0.3s;
+    }
+
+    svg {
+      fill: $fuchsia-dark;
+
+      transition-property: fill;
+      transition-duration: 0.3s;
+      will-change: fill;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+
+    transition-property: opacity;
+    transition-duration: 0.3s;
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    fill: $fuchsia;
+
+    transition-property: fill;
+    transition-duration: 0.3s;
+    will-change: fill;
+  }
+
+  span {
+    margin-left: 32px;
+    margin-top: 7.5px;
+
+    @include font-proxima(14px, 1, 700, $fuchsia);
+
+    transition-property: color;
+    transition-duration: 0.3s;
+  }
+}

@@ -1,0 +1,13 @@
+@mixin font-proxima($size, $height, $weight, $color) {
+  font-family: $font-proxima;
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
