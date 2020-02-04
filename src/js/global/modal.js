@@ -21,13 +21,21 @@
     },
     { // для модалки купить в клик
       BTN: '.js-buy-click-btn',
-      MODAL: '.js-modal-buy-click',
-      CALLBACK : 'addInfutAutofocus'
+      MODAL: '.js-modal-buy-click'
     }
   ];
 
   if (!modals) {
     return;
+  }
+
+  function addInputFocus(modal) {
+    // добавляет фокус на первое поле
+    var input = modal.querySelector('form input[type]:not([type="checkbox"]):not([type="radio"]):not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="range"]):not([type="file"]):not([type="image"])');
+    if (!input) {
+      return;
+    }
+    input.focus();
   }
 
   function activateModalOpen() {
@@ -39,6 +47,7 @@
       }
       modal.classList.remove(hideClass);
       body.classList.add(scrollHiddenClass);
+      addInputFocus(modal);
     }
     Array.prototype.forEach.call(modalSelector, function(it) {
       document.addEventListener('click', function(evt) {

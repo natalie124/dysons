@@ -1,0 +1,76 @@
+<section class="order-registration-form">
+  <div class="order-registration-form__item">
+    <h2 class="order-registration-form__title">Контактные данные</h2>
+    <div class="input-item">
+      <label for="order-registration-name">Ваше имя</label>
+      <input type="text" name="name" id="order-registration-name" required>
+    </div>
+    <div class="input-item">
+      <label for="order-registration-phone">Телефон</label>
+      <input type="tel" name="phone" id="order-registration-phone" placeholder="+7 (___) ___ __-__" required>
+    </div>
+    <div class="input-item">
+      <label for="order-registration-email">Электронная почта</label>
+      <input type="email" name="email" id="order-registration-email" required>
+    </div>
+  </div>
+  <div class="order-registration-form__item">
+    <h2 class="order-registration-form__title">Адрес доставки</h2>
+    <div class="input-item">
+      <label for="order-registration-city">Город</label>
+      <input type="text" name="city" id="order-registration-city" required>
+    </div>
+    <div class="input-item">
+      <label for="order-registration-street">Улица</label>
+      <input type="text" name="street" id="order-registration-street" required>
+    </div>
+    <div class="input-item__container">
+      <div class="input-item">
+        <label for="order-registration-house">Дом</label>
+        <input type="text" name="house" id="order-registration-house" required=>
+      </div>
+      <div class="input-item">
+        <label for="order-registration-flat">Кв / офис</label>
+        <input type="text" name="flat" id="order-registration-flat">
+      </div>
+    </div>
+  </div>
+  <div class="order-registration-form__item">
+    <h2 class="order-registration-form__title">Способ доставки</h2>
+    <div class="input-check">
+      <input type="radio" name="delivery" id="order-registration-delivery-on-moscow" value="on-moscow">
+      <label for="order-registration-delivery-on-moscow">Курьерская доставка по Москве в пределах МКАД
+        <span>300<span> руб.</span></span>
+      </label>
+    </div>
+    <div class="input-check">
+      <input type="radio" name="delivery" id="order-registration-delivery-outside-moscow" value="outside-moscow" checked>
+      <label for="order-registration-delivery-outside-moscow">Стоимость доставки за пределами МКАД составляет
+        <span>400-700<span> руб.</span></span>
+      </label>
+    </div>
+    <div class="input-check">
+      <input type="radio" name="delivery" id="order-registration-delivery-sdec" value="sdec">
+      <label for="order-registration-delivery-sdec">Доставка по России / СДЭК
+        <span>500<span> руб.</span></span>
+      </label>
+    </div>
+    <div class="input-check">
+      <input type="radio" name="delivery" id="order-registration-delivery-pony" value="pony">
+      <label for="order-registration-delivery-pony">Доставка по России / Пони экспресс
+        <span>500<span> руб.</span></span>
+      </label>
+    </div>
+  </div>
+  <div class="order-registration-form__item">
+    <h2 class="order-registration-form__title">Способ оплаты</h2>
+    <div class="input-check">
+      <input type="radio" name="payment" id="order-registration-payment-courier" value="courier" checked>
+      <label for="order-registration-payment-courier">При получении курьеру</label>
+    </div>
+    <div class="input-check">
+      <input type="radio" name="payment" id="order-registration-payment-card" value="card">
+      <label for="order-registration-payment-card">Оплата картой на сайте</label>
+    </div>
+  </div>
+</section>

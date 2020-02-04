@@ -64,3 +64,14 @@
     resize: none;
   }
 }
+
+.input-item__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  .input-item {
+    width: 46%;
+  }
+}

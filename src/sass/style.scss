@@ -7,6 +7,8 @@
 @import "global/button";
 @import "global/form-select";
 @import "global/input-item";
+@import "global/input-check";
+@import "global/quantity-block";
 @import "blocks/header/page-header";
 @import "blocks/header/main-nav";
 @import "blocks/drop-menu";
@@ -27,6 +29,10 @@
 @import "blocks/product/product-info";
 @import "blocks/product/description";
 @import "blocks/product/equipment";
+@import "blocks/cart/cart-items";
+@import "blocks/cart/order-registration";
+@import "blocks/cart/order-registration-form";
+@import "blocks/cart/order-registration-info";
 @import "blocks/modal";
 @import "blocks/modal-add";
 @import "blocks/modal-buy-click";

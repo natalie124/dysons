@@ -1,0 +1,90 @@
+.input-check {
+  label {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    max-width: 270px;
+    min-height: 70px;
+    padding-left: 35px;
+    margin-bottom: 17px;
+
+    @include font-proxima(15px, 20px, 400, #888787);
+
+    transition-property: color;
+    transition-duration: 0.3s;
+
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      color: $fuchsia-dark;
+
+      transition-property: color;
+      transition-duration: 0.3s;
+    }
+
+    &::before {
+      position: absolute;
+      top: 3px;
+      left: 0;
+
+      width: 16px;
+      height: 16px;
+
+      border: 2px solid #e9e9e9;
+      background-color: transparent;
+
+      transition-property: border-color, background-color;
+      transition-duration: 0.3s;
+
+      content: "";
+    }
+
+    &::after {
+      position: absolute;
+      top: 4px;
+      left: 4.5px;
+
+      width: 7px;
+      height: 9px;
+
+      background-color: transparent;
+      border-right: 2px solid transparent;
+      border-bottom: 2px solid transparent;
+
+      transform: rotate(45deg);
+
+      transition-property: border-color;
+      transition-duration: 0.3s;
+
+      content: "";
+    }
+
+    span {
+      @include font-proxima(18px, 24px, 700, $black);
+      padding-top: 5px;
+    }
+  }
+
+  input:checked+label {
+
+    &:before {
+      border: 2px solid $fuchsia;
+      background-color: $fuchsia;
+
+      transition-property: border-color, background-color;
+      transition-duration: 0.3s;
+    }
+
+    &:after {
+      border-color: $white;
+
+      transition-property: border-color;
+      transition-duration: 0.3s;
+    }
+  }
+}

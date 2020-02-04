@@ -1,0 +1,54 @@
+.order-registration-info {
+  max-width: 350px;
+  min-width: 320px;
+  width: 100%;
+  padding: 10px 40px 25px;
+
+  background-color: $white;
+  border-radius: 2px;
+  box-shadow: 0px 0px 50px 0px rgba(180, 32, 121, 0.1);
+}
+
+.order-registration-info__item {
+  border-bottom: 1px solid #e1e1e1;
+
+  &:last-of-type {
+    border: none;
+  }
+}
+
+.order-registration-info__title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  width: 100%;
+  margin: 0 0 20px;
+  padding: 20px 0 0;
+
+  @include font-proxima(14px, 1.2, 300, #909090);
+  letter-spacing: 0.005em;
+
+  img {
+    width: 22px;
+    height: 22px;
+    margin-right: 17px;
+  }
+}
+
+.order-registration-info__cost {
+  width: 100%;
+  margin: 0 0 25px;
+  padding: 0;
+
+  @include font-proxima(30px, 1.2, 400, $black);
+  letter-spacing: 0.005em;
+}
+
+.order-registration-info__text {
+  width: 100%;
+  margin: 0 0 15px;
+  padding: 0;
+
+  @include font-proxima(16px, 24px, 400, #2b2b2b);
+}

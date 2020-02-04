@@ -1,4 +1,65 @@
 (function() {
+  var cartForm = document.querySelector('.js-cart-form form');
+  var codeEnter = 13;
+
+  if (!cartForm) {
+    return;
+  }
+
+  function blocksButtons() {
+    // блокирует кнопки submit
+    var btns = document.querySelectorAll('button[type="submit"]');
+
+    if (!btns) {
+      return
+    }
+    Array.prototype.forEach.call(btns, function(btn) {
+      console.log(btn);
+      btn.disabled = true;
+    });
+  }
+
+  function checkItems() {
+    // проверяет наличие товаров в корзине
+    var cartItems = document.querySelectorAll('.js-cart-item');
+    return cartItems.length === null || cartItems.length < 1 ? false : true
+  }
+
+  function addItemsRemove() {
+    // добавляет удаление товаров из корзины
+    var removebtns = document.querySelectorAll('.js-remove-btn');
+    if (!removebtns) {
+      return;
+    }
+
+    Array.prototype.forEach.call(removebtns, function(btn) {
+      btn.addEventListener('click', function() {
+        btn.parentNode.remove();
+        var flag = checkItems();
+        if (flag === false) {
+          blocksButtons();
+        }
+      });
+      btn.addEventListener('keydown', function() {
+        if (evt.keyCode === codeEnter) {
+          btn.parentNode.remove();
+        }
+      });
+    });
+  }
+
+  if (!Element.prototype.remove) {
+    Element.prototype.remove = function remove() {
+      if (this.parentNode) {
+        this.parentNode.removeChild(this);
+      }
+    };
+  }
+
+  addItemsRemove();
+})();
+
+(function() {
   var body = document.querySelector('body');
   var scrollbarClass = 'scrollbar';
 
@@ -152,28 +213,6 @@
 })();
 
 (function() {
-
-  var telInputs = document.querySelectorAll('input[type="tel"]');
-
-  Array.prototype.forEach.call(telInputs, function(it) {
-    var phoneMask = new IMask(it, {
-      mask: '+7(000)000-00-00'
-    });
-  });
-
-  window.addInfutAutofocus = function() {
-    var input = document.querySelector('form input[type]:not([type="checkbox"]):not([type="radio"]):not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="range"]):not([type="file"]):not([type="image"])');
-    if (!input) {
-      return;
-    }
-
-    console.log(input);
-    input.focus();
-  }
-
-})();
-
-(function() {
   var modals = document.querySelectorAll('.js-modal');
   var hideClass = 'js-hide';
 
@@ -196,13 +235,21 @@
     },
     { // для модалки купить в клик
       BTN: '.js-buy-click-btn',
-      MODAL: '.js-modal-buy-click',
-      CALLBACK : 'addInfutAutofocus'
+      MODAL: '.js-modal-buy-click'
     }
   ];
 
   if (!modals) {
     return;
+  }
+
+  function addInputFocus(modal) {
+    // добавляет фокус на первое поле
+    var input = modal.querySelector('form input[type]:not([type="checkbox"]):not([type="radio"]):not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="range"]):not([type="file"]):not([type="image"])');
+    if (!input) {
+      return;
+    }
+    input.focus();
   }
 
   function activateModalOpen() {
@@ -214,6 +261,7 @@
       }
       modal.classList.remove(hideClass);
       body.classList.add(scrollHiddenClass);
+      addInputFocus(modal);
     }
     Array.prototype.forEach.call(modalSelector, function(it) {
       document.addEventListener('click', function(evt) {
@@ -279,6 +327,66 @@
 
   activateModalClose();
   activateModalOpen();
+})();
+
+(function() {
+
+  var telInputs = document.querySelectorAll('input[type="tel"]');
+
+  if (telInputs) {
+    return
+  }
+
+  Array.prototype.forEach.call(telInputs, function(it) {
+    // маска для поля с телефонос
+    var phoneMask = new IMask(it, {
+      mask: '+7(000)000-00-00'
+    });
+  });
+})();
+
+(function() {
+  function quantityProducts() {
+    // для полей с количеством товара
+    var items = document.querySelectorAll('.quantity-block')
+
+    Array.prototype.forEach.call(items, function(item) {
+      var minus = item.querySelector('.quantity-block__btn--minus');
+      var plus = item.querySelector('.quantity-block__btn--plus');
+      var input = item.querySelector('input');
+
+      var defaultMin = 2;
+      var defaultMax = 100;
+      var dataMin = input.getAttribute('data-min');
+      var dataMax = input.getAttribute('data-max');
+
+      var min = dataMin && parseInt(dataMin) ? dataMin : defaultMin;
+      var max = dataMin && parseInt(dataMin) ? dataMax : defaultMax;
+
+      var quantityFieldMask = new IMask(input, {
+        mask: Number,
+        min: min,
+        max: max
+      });
+
+      function quantityMinus() {
+        if (input.value > min) {
+          input.value = +input.value - 1;
+        }
+      }
+
+      function quantityPlus() {
+        if (input.value < max) {
+          input.value = +input.value + 1;
+        }
+      }
+
+      minus.addEventListener('click', quantityMinus);
+      plus.addEventListener('click', quantityPlus);
+    });
+  }
+
+  quantityProducts();
 })();
 
 'user strict';

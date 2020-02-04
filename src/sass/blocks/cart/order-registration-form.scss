@@ -1,0 +1,27 @@
+.order-registration-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  flex-wrap: wrap;
+
+  max-width: 730px;
+  width: 100%;
+}
+
+.order-registration-form__item {
+  max-width: 350px;
+  min-width: 320px;
+  width: 100%;
+}
+
+.order-registration-form__title {
+  display: block;
+
+  width: 100%;
+  margin: 0 0 25px;
+  padding: 16px 35px;
+
+  @include font-proxima(16px, 1.2, 700, #212121);
+
+  background-color: #f2f2f2;
+}

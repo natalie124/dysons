@@ -33,6 +33,15 @@
     transition-duration: 0.3s;
   }
 
+  &:disabled {
+    color: #f8f5f5;
+
+    background-color: #ebebeb;
+    border-color: #ebebeb;
+
+    cursor: default;
+  }
+
 
   &--small {
     padding: 13px 30px 13px;
