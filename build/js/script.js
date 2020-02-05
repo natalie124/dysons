@@ -1,3 +1,4 @@
+'use strict';
 (function() {
   var cartForm = document.querySelector('.js-cart-form form');
   var codeEnter = 13;
@@ -59,6 +60,7 @@
   addItemsRemove();
 })();
 
+'use strict';
 (function() {
   var body = document.querySelector('body');
   var scrollbarClass = 'scrollbar';
@@ -96,6 +98,7 @@
   checkScrollbar();
 })();
 
+'use strict';
 (function() {
   // активирует дроп-меню
   function activateDropMenu() {
@@ -142,6 +145,7 @@
   activateDropMenu();
 })();
 
+'use strict';
 (function() {
   // для кастомных селектов селектов
   var selects = document.querySelectorAll('.form-select');
@@ -212,6 +216,7 @@
   });
 })();
 
+'use strict';
 (function() {
   var modals = document.querySelectorAll('.js-modal');
   var hideClass = 'js-hide';
@@ -329,26 +334,31 @@
   activateModalOpen();
 })();
 
+'use strict';
 (function() {
-
   var telInputs = document.querySelectorAll('input[type="tel"]');
 
-  if (telInputs) {
+  if (!telInputs) {
     return
   }
 
   Array.prototype.forEach.call(telInputs, function(it) {
-    // маска для поля с телефонос
+    // маска для поля с телефоном
     var phoneMask = new IMask(it, {
       mask: '+7(000)000-00-00'
     });
   });
 })();
 
+'use strict';
 (function() {
   function quantityProducts() {
     // для полей с количеством товара
-    var items = document.querySelectorAll('.quantity-block')
+    var items = document.querySelectorAll('.quantity-block');
+
+    if (!items) {
+      return;
+    }
 
     Array.prototype.forEach.call(items, function(item) {
       var minus = item.querySelector('.quantity-block__btn--minus');
@@ -389,7 +399,7 @@
   quantityProducts();
 })();
 
-'user strict';
+'use strict';
 (function() {
   // для промо слайдера
   var swiper = new Swiper('.promo-slider', {
@@ -459,6 +469,7 @@
   activateSliders();
 })();
 
+'use strict';
 (function() {
   function activateTabSwitch() {
     // переключает вкладки на странице продукта
@@ -490,6 +501,7 @@
   activateTabSwitch();
 })();
 
+'use strict';
 (function() {
   // скрывает постеры к видео
   function hideVideoPoster() {

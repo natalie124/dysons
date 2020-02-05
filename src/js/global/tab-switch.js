@@ -1,3 +1,4 @@
+'use strict';
 (function() {
   function activateTabSwitch() {
     // переключает вкладки на странице продукта

@@ -1,3 +1,4 @@
+'use strict';
 (function() {
   // активирует дроп-меню
   function activateDropMenu() {

@@ -1,3 +1,4 @@
+'use strict';
 (function() {
   var body = document.querySelector('body');
   var scrollbarClass = 'scrollbar';

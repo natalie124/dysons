@@ -1,3 +1,4 @@
+'use strict';
 (function() {
   // скрывает постеры к видео
   function hideVideoPoster() {

@@ -1,7 +1,12 @@
+'use strict';
 (function() {
   function quantityProducts() {
     // для полей с количеством товара
-    var items = document.querySelectorAll('.quantity-block')
+    var items = document.querySelectorAll('.quantity-block');
+
+    if (!items) {
+      return;
+    }
 
     Array.prototype.forEach.call(items, function(item) {
       var minus = item.querySelector('.quantity-block__btn--minus');

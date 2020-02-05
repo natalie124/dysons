@@ -1,3 +1,4 @@
+'use strict';
 (function() {
   var modals = document.querySelectorAll('.js-modal');
   var hideClass = 'js-hide';

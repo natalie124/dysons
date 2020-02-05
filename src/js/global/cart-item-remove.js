@@ -1,3 +1,4 @@
+'use strict';
 (function() {
   var cartForm = document.querySelector('.js-cart-form form');
   var codeEnter = 13;

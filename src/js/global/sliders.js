@@ -1,4 +1,4 @@
-'user strict';
+'use strict';
 (function() {
   // для промо слайдера
   var swiper = new Swiper('.promo-slider', {
