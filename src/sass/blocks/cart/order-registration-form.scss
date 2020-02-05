@@ -12,16 +12,27 @@
   max-width: 350px;
   min-width: 320px;
   width: 100%;
+  margin-bottom: 35px;
+
+  .input-item {
+    label {
+      margin-left: 30px;
+    }
+
+    input {
+      margin-bottom: 1px;
+    }
+  }
 }
 
 .order-registration-form__title {
   display: block;
 
   width: 100%;
-  margin: 0 0 25px;
+  margin: 0 0 22px;
   padding: 16px 35px;
 
-  @include font-proxima(16px, 1.2, 700, #212121);
+  @include font-proxima(18px, 1.2, 700, #212121);
 
   background-color: #f2f2f2;
 }

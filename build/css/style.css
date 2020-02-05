@@ -1751,11 +1751,11 @@ video.cover {
       -ms-flex-align: start;
           align-items: flex-start;
   max-width: 270px;
-  min-height: 70px;
-  padding-left: 35px;
+  min-height: 68px;
+  padding-left: 34px;
   margin-bottom: 17px;
   font-family: "Proxima Nova", "Arial", sans-serif;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 20px;
   font-weight: 400;
   color: #888787;
@@ -2618,6 +2618,10 @@ video.cover {
   background-color: #ffffff;
 }
 
+.pagination--big {
+  padding-bottom: 26px;
+}
+
 .pagination__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2788,6 +2792,10 @@ video.cover {
 .content-header--big-title .content-header__title {
   font-size: 60px;
   letter-spacing: 0.01em;
+}
+
+.content-header--small-margin {
+  margin-bottom: 21px;
 }
 
 .content-header__wrapper {
@@ -4282,8 +4290,8 @@ video.cover {
   padding: 0;
   list-style: none;
   width: 100%;
-  margin-bottom: 40px;
-  padding: 20px 0;
+  margin-bottom: 45px;
+  padding: 5px 0 0;
   border-top: 1px solid #eeeeee;
 }
 
@@ -4300,7 +4308,7 @@ video.cover {
           align-items: stretch;
   width: 100%;
   margin-bottom: 5px;
-  padding-right: 150px;
+  padding-right: 14.4%;
 }
 
 .cart-items__info {
@@ -4313,13 +4321,16 @@ video.cover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  max-width: 380px;
+  min-width: 320px;
+  width: 100%;
   margin-right: 20px;
-  margin-bottom: 20px;
 }
 
 .cart-items__img {
-  width: 135px;
-  height: 135px;
+  width: 127px;
+  height: 127px;
+  margin-top: 5px;
   -webkit-transition-property: opacity;
   transition-property: opacity;
   -webkit-transition-duration: 0.3s;
@@ -4398,21 +4409,17 @@ video.cover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 20px;
-}
-
-.cart-items__quantity {
-  margin-right: 95px;
+  width: 303px;
 }
 
 .cart-items__btn {
   position: absolute;
-  right: 36px;
-  top: calc(50% - 30px);
+  right: 4%;
+  top: calc(50% - 23px);
 }
 
 .cart-items__cost {
-  margin: 0;
+  margin: 0 0 0 auto;
   padding: 0;
   font-family: "Proxima Nova", "Arial", sans-serif;
   font-size: 20px;
@@ -4433,7 +4440,7 @@ video.cover {
       -ms-flex-align: start;
           align-items: flex-start;
   width: 100%;
-  margin-bottom: 78px;
+  margin-bottom: 20px;
 }
 
 .order-registration-form {
@@ -4456,15 +4463,24 @@ video.cover {
   max-width: 350px;
   min-width: 320px;
   width: 100%;
+  margin-bottom: 35px;
+}
+
+.order-registration-form__item .input-item label {
+  margin-left: 30px;
+}
+
+.order-registration-form__item .input-item input {
+  margin-bottom: 1px;
 }
 
 .order-registration-form__title {
   display: block;
   width: 100%;
-  margin: 0 0 25px;
+  margin: 0 0 22px;
   padding: 16px 35px;
   font-family: "Proxima Nova", "Arial", sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.2;
   font-weight: 700;
   color: #212121;
@@ -4475,7 +4491,7 @@ video.cover {
   max-width: 350px;
   min-width: 320px;
   width: 100%;
-  padding: 10px 40px 25px;
+  padding: 14px 40px 25px;
   background-color: #ffffff;
   border-radius: 2px;
   -webkit-box-shadow: 0px 0px 50px 0px rgba(180, 32, 121, 0.1);
@@ -4519,7 +4535,7 @@ video.cover {
 
 .order-registration-info__cost {
   width: 100%;
-  margin: 0 0 25px;
+  margin: 0 0 18px;
   padding: 0;
   font-family: "Proxima Nova", "Arial", sans-serif;
   font-size: 30px;
@@ -4531,8 +4547,8 @@ video.cover {
 
 .order-registration-info__text {
   width: 100%;
-  margin: 0 0 15px;
-  padding: 0;
+  margin: 0;
+  padding: 0 21px 0 0;
   font-family: "Proxima Nova", "Arial", sans-serif;
   font-size: 16px;
   line-height: 24px;

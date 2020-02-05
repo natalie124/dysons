@@ -8,11 +8,11 @@
     align-items: flex-start;
 
     max-width: 270px;
-    min-height: 70px;
-    padding-left: 35px;
+    min-height: 68px;
+    padding-left: 34px;
     margin-bottom: 17px;
 
-    @include font-proxima(15px, 20px, 400, #888787);
+    @include font-proxima(14px, 20px, 400, #888787);
 
     transition-property: color;
     transition-duration: 0.3s;

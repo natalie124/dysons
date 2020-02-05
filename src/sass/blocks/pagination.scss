@@ -4,6 +4,10 @@
   padding: 50px 0 15px;
 
   background-color: $white;
+
+  &--big {
+    padding-bottom: 26px;
+  }
 }
 
 .pagination__list {
