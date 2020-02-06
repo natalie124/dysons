@@ -1,8 +1,25 @@
 .catalog-filter__item {
   margin-left: 20px;
+
+  @media(max-width: $tablet) {
+    margin: 0 20px 0 0;
+  }
+
+  @media(max-width :$mobile) {
+    margin: 0;
+
+    &--show {
+      display: none;
+    }
+  }
 }
+
 .catalog-filter__sort {
   width: 190px;
+
+  @media(max-width: $mobile) {
+    width: 185px;
+  }
 }
 
 .catalog-filter__show {

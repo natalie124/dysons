@@ -539,6 +539,20 @@
 
 'use strict';
 (function() {
+  var els = document.querySelectorAll('.js-scroll-left');
+
+  if (!els) {
+    return;
+  }
+
+  Array.prototype.forEach.call(els, function(el) {
+    // меняет направление скролла элемнта
+    el.scrollLeft = el.scrollWidth - el.clientWidth;
+  });
+})();
+
+'use strict';
+(function() {
   // для промо слайдера
   var swiper = new Swiper('.promo-slider', {
     slidesPerView: 1,

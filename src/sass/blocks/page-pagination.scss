@@ -1,6 +1,10 @@
 .page-pagination {
   width: 100%;
   margin-bottom: 63px;
+
+  @media(max-width: $mobile) {
+    display: none;
+  }
 }
 
 .page-pagination__wrapper {
@@ -40,6 +44,10 @@
     .page-pagination__btn {
       margin-right: 60px;
     }
+
+    .page-pagination__title {
+      margin-right: 20px;
+    }
   }
 
   &--next {
@@ -49,6 +57,9 @@
 
     .page-pagination__btn {
       margin-left: 60px;
+    }
+    .page-pagination__title {
+      margin-left: 20px;
     }
   }
 }
@@ -62,6 +73,10 @@
   transition-duration: 0.3s;
 
   cursor: pointer;
+
+  @media(max-width: $tablet) {
+    text-align: center;
+  }
 
   &:hover,
   &:focus {

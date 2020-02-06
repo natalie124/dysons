@@ -8,6 +8,38 @@
   &--big {
     padding-bottom: 26px;
   }
+
+  @media(max-width: $mobile) {
+    padding: 0;
+    margin-bottom: 25px;
+  }
+}
+
+.pagination__wrapper {
+  @media(max-width: $mobile) {
+    position: relative;
+
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    padding: 0 0 0 20px;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+
+      height: 100%;
+      width: 50px;
+
+      background: linear-gradient(-270deg, #f6f6f6 5%, rgba(255, 255, 255, 0) 100%);
+
+      content: "";
+    }
+  }
 }
 
 .pagination__list {
@@ -17,6 +49,14 @@
   flex-wrap: wrap;
 
   @include list-reset;
+
+  @media(max-width: $mobile) {
+    flex-wrap: nowrap;
+
+    margin-right: 50px;
+
+    overflow-x: auto;
+  }
 }
 
 .pagination__item {
@@ -37,6 +77,10 @@
       }
     }
   }
+
+  @media(max-width: $mobile) {
+    padding: 25px 0;
+  }
 }
 
 .pagination__link {
@@ -49,6 +93,10 @@
 
   transition-property: color;
   transition-duration: 0.3s;
+
+  @media(max-width: $tablet) {
+    white-space: nowrap;
+  }
 
   &::after {
     margin-left: 14px;

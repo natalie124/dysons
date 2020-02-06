@@ -9,6 +9,11 @@
 
     outline: none;
     cursor: pointer;
+
+    @media(max-width: $mobile) {
+      font-size: 15px;
+      letter-spacing: -0.04em;
+    }
   }
 }
 
@@ -28,6 +33,10 @@
   transition-duration: 0.3s;
 
   cursor: pointer;
+
+  @media(max-width: $mobile) {
+    margin-right: 5px;
+  }
 
   &:hover,
   &:focus {
@@ -55,6 +64,11 @@
   outline: none;
   cursor: pointer;
   overflow: hidden;
+
+  @media(max-width: $mobile) {
+    font-size: 15px;
+    letter-spacing: -0.05em;
+  }
 
   &:hover,
   &:focus {
@@ -151,6 +165,11 @@
     transition-duration: 0.3s;
 
     cursor: pointer;
+
+    @media(max-width: $mobile) {
+      font-size: 15px;
+      letter-spacing: -0.05em;
+    }
 
     &:hover,
     &:focus {
