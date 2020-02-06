@@ -22,6 +22,10 @@
   bottom: 26px;
   margin-left: -13px;
 
+  @media (max-width: $mobile) {
+    bottom: 22px;
+  }
+
   .swiper-pagination-bullet-active {
     width: 12px;
     height: 12px;
@@ -59,12 +63,34 @@
   z-index: 30;
   top: calc(50% - 30px);
 
+  @media (max-width: $mobile) {
+    top: auto;
+    bottom: 0;
+  }
+
   &--prev {
     right: 87.8%;
+
+    @media (max-width: $tablet) {
+      right: 90%;
+    }
+
+    @media (max-width: $mobile) {
+      left: 0;
+    }
   }
 
   &--next {
     left: 87.8%;
+
+    @media (max-width: $tablet) {
+      left: 90%;
+    }
+
+    @media (max-width: $mobile) {
+      left: auto;
+      right: 0;
+    }
   }
 }
 
@@ -78,6 +104,10 @@
 
   width: 100%;
   padding-bottom: 7.7%;
+
+  @media (max-width: $mobile) {
+    padding-bottom: 63px;
+  }
 }
 
 .promo-slider__img {
@@ -115,9 +145,16 @@
   width: 80%;
   margin-top: 6.7%;
   padding-left: 8%;
+
+  @media (max-width: $mobile) {
+    width: 87.5%;
+    margin: 10.94% auto 0;
+    padding: 0;
+  }
 }
 
 .promo-slider__category {
+  width: 100%;
   padding: 0;
   margin: 0;
 
@@ -126,6 +163,18 @@
 
   transition-property: color;
   transition-duration: 0.3s;
+
+  @media (max-width: $tablet) {
+    font-size: 36px;
+  }
+
+  @media (max-width: $mobile) {
+    margin-bottom: 15px;
+    padding-left: 20px;
+
+    font-size: 29px;
+    letter-spasing: 0.01em;
+  }
 
   &:hover,
   &:focus {
@@ -158,6 +207,17 @@
   transition-property: color;
   transition-duration: 0.3s;
 
+  @media (max-width: $tablet) {
+    font-size: 60px;
+  }
+
+  @media (max-width: $mobile) {
+    padding-left: 20px;
+
+    font-size: 48px;
+    line-height: 48px;
+  }
+
   &:hover,
   &:focus {
     color: $fuchsia-light;
@@ -183,6 +243,16 @@
   @include font-proxima(36px, 1.2, 700, $violet);
   text-transform: lowercase;
 
+  @media (max-width: $tablet) {
+    font-size: 28px;
+  }
+
+  @media (max-width: $mobile) {
+    padding-left: 20px;
+
+    font-size: 21.8px;
+  }
+
   &::before {
     position: absolute;
     left: 0;
@@ -196,11 +266,27 @@
   @include list-reset;
   margin-bottom: 13px;
 
+  @media (max-width: $mobile) {
+    margin-bottom: 0;
+  }
+
   li {
     position: relative;
 
     padding: 0 0 0 30px;
     @include font-proxima(20px, 36px, 400, #dadada);
+
+    @media (max-width: $tablet) {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    @media (max-width: $mobile) {
+      padding-left: 20px;
+
+      font-size: 16px;
+      line-height: 21.8px;
+    }
 
     &::before {
       position: absolute;
@@ -225,6 +311,12 @@
   flex-wrap: wrap;
 
   padding-left: 30px;
+
+  @media (max-width: $mobile) {
+    padding: 0;
+
+    justify-content: center;
+  }
 }
 
 .promo-slider__cost {
@@ -232,8 +324,23 @@
   padding: 0;
 
   @include font-proxima(48px, 1.2, 700, $white);
+
+  @media (max-width: $tablet) {
+    font-size: 36px;
+  }
+
+  @media (max-width: $mobile) {
+    margin-bottom: 15px;
+
+    font-size: 48px;
+  }
 }
 
 .promo-slider__btn {
   margin: -7px 0 0 1px;
+
+  @media (max-width: $tablet) {
+    width: 70%;
+    margin: 0;
+  }
 }

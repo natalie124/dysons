@@ -18,6 +18,12 @@
 
   cursor: pointer;
 
+  @media (max-width: $tablet) {
+    padding: 14px 30px;
+
+    font-size: 18px;
+  }
+
   &:hover,
   &:focus {
     background-color: $fuchsia-dark;
@@ -92,6 +98,12 @@
     border-color: #ebebeb;
     background-color: $white;
 
+    @media (max-width: $tablet) {
+      padding: 14px 30px;
+
+      font-size: 18px;
+    }
+
     &:hover,
     &:focus {
       background-color: #ebebeb;
@@ -130,6 +142,11 @@
   outline: none;
   cursor: pointer;
 
+  @media (max-width: $tablet) {
+    width: 57px;
+    height: 57px;
+  }
+
   &::before {
     width: 30px;
     height: 30px;
@@ -142,6 +159,11 @@
     transition-duration: 0.3s;
 
     content: "";
+
+    @media (max-width: $tablet) {
+      width: 24px;
+      height: 24px;
+    }
   }
 
   &--light {

@@ -1,7 +1,15 @@
 .categories {
   width: 100%;
   margin-bottom: 49px;
+}
+
+.categories__wrapper {
   padding: 0 1.4%;
+
+  @media (max-width: $tablet) {
+    margin-bottom: 30px;
+    padding: 0 20px;
+  }
 }
 
 .categories__list {
@@ -11,6 +19,10 @@
   flex-wrap: wrap;
 
   @include list-reset;
+
+  @media (max-width: $mobile) {
+    justify-content: center;
+  }
 }
 
 .categories__item {
@@ -18,8 +30,12 @@
   justify-content: flex-start;
   align-items: stretch;
 
-  min-width: 150px;
+  min-width: 140px;
   width: 25%;
+
+  @media (max-width: $mobile) {
+    margin-bottom: 15px;
+  }
 }
 
 .categories__link {
@@ -37,6 +53,10 @@
 
   transition-property: border-color;
   transition-duration: 0.3s;
+
+  @media (max-width: $tablet) {
+    padding: 10px;
+  }
 
   &:hover,
   &:focus {
@@ -71,5 +91,15 @@
 
     transition-property: color;
     transition-duration: 0.3s;
+
+    @media (max-width: $tablet) {
+      font-size: 22px;
+    }
+
+    @media (max-width: $mobile) {
+      margin-top: 18px;
+
+      font-size: 18px;
+    }
   }
 }

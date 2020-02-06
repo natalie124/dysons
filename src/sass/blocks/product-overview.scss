@@ -1,13 +1,29 @@
 .product-overview {
+  width: 100%;
+}
+
+.product-overview__wrapper {
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
   flex-wrap: wrap;
 
-  width: 100%;
   margin-bottom: 82px;
   padding-top: 50px;
   padding-bottom: 50px;
+
+  @media (max-width: $tablet) {
+    justify-content: space-between;
+
+    margin-bottom: 60px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 0;
+    margin-bottom: 30px;
+  }
 }
 
 .product-overview__media {
@@ -18,10 +34,24 @@
   width: 43%;
   min-width: 400px;
   margin-right: 6.5%;
+
+  @media (max-width: $tablet) {
+    min-width: 320px;
+    width: 50%;
+    margin-right: 3%;
+  }
+
+  @media (max-width: $mobile) {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 25px;
+  }
 }
 
 .product-overview__video {
   position: relative;
+
+  align-self: center;
 
   width: 100%;
   padding-bottom: 60.4%;
@@ -96,6 +126,14 @@
 
   outline: none;
 
+  @media (max-width: $mobile) {
+    top: calc(50% - 45px);
+    left: calc(50% - 45px);
+
+    width: 90px;
+    height: 90px;
+  }
+
   &::after {
     position: absolute;
     top: 29px;
@@ -108,6 +146,14 @@
     transition-duration: 0.3s;
 
     content: "";
+
+    @media (max-width: $mobile) {
+      top: 26px;
+      left: 35px;
+
+      border: 19px solid transparent;
+      border-left: 29px solid $fuchsia;
+    }
   }
 }
 
@@ -118,6 +164,15 @@
   align-items: flex-start;
 
   width: 50.5%;
+
+  @media (max-width: $tablet) {
+    width: 46.5%;
+  }
+
+  @media (max-width: $mobile) {
+    width: 100%;
+    padding: 0 15px;
+  }
 }
 
 .product-overview__title {
@@ -133,6 +188,21 @@
   @include font-proxima(30px, 1.2, 700, #0f0f0f);
   text-decoration: none;
   letter-spacing: 0.005em;
+
+  @media (max-width: $tablet) {
+    margin-bottom: 20px;
+    padding-top: 0;
+
+    font-size: 28px;
+  }
+
+  @media (max-width: $mobile) {
+    display: inline-block;
+    vertical-align: middle;
+
+    font-size: 24px;
+    letter-spasing: 0.005em;
+  }
 }
 
 .product-overview__text {
@@ -143,4 +213,9 @@
   @include font-proxima(17px, 24px, 300, #4f4e4e);
   text-decoration: none;
   letter-spacing: 0.005em;
+
+  @media (max-width: $mobile) {
+    font-size: 15px;
+    line-height: 18px;
+  }
 }

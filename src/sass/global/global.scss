@@ -11,6 +11,9 @@ html {
 body {
   position: relative;
 
+  min-width: 320px;
+  width: 100%;
+
   @include font-proxima(18px, 20px, 400, $black);
 }
 

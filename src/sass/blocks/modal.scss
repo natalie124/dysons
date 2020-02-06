@@ -40,4 +40,10 @@
 
   top: 30px;
   right: 40px;
+
+  @media (max-width: $mobile) {
+    top: 0;
+    right: 0;
+  }
 }
+

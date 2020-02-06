@@ -4,41 +4,51 @@
   justify-content: flex-start;
   align-items: flex-start;
 
-  min-width: 280px;
+  min-width: 246px;
   max-width: 285px;
   width: 100%;
-  padding: 24px;
+  padding: 9.75%;
 
   border: 1px solid transparent;
 
   transition-property: border-color;
   transition-duration: 0.3s;
 
-  &:hover {
-    border-color: $fuchsia;
+  @media (max-width: $tablet) {
+    min-width: 140px;
+  }
 
-    transition-property: border-color;
-    transition-duration: 0.3s;
+  @media (max-width: $mobile) {
+    padding: 7.5px;
+  }
 
-    .card__detail {
-      opacity: 1;
-
-      transition-property: opacity;
-      transition-duration: 0.3s;
-    }
-
-    .card__cart {
-      background-color: $fuchsia;
+  @media (min-width: 1024px) {
+    &:hover {
+      border-color: $fuchsia;
 
       transition-property: border-color;
       transition-duration: 0.3s;
 
-      svg {
-        fill: $white;
+      .card__detail {
+        opacity: 1;
 
-        transition-property: fill;
+        transition-property: opacity;
         transition-duration: 0.3s;
-        will-change: fill;
+      }
+
+      .card__cart {
+        background-color: $fuchsia;
+
+        transition-property: border-color;
+        transition-duration: 0.3s;
+
+        svg {
+          fill: $white;
+
+          transition-property: fill;
+          transition-duration: 0.3s;
+          will-change: fill;
+        }
       }
     }
   }
@@ -52,11 +62,18 @@
   align-items: center;
 
   width: 100%;
-  height: 275px;
+  height: auto;
+  padding-bottom: 120.9%;
+
   margin-bottom: 34px;
 
-
   overflow: hidden;
+
+  @media (max-width: $tablet) {
+    height: auto;
+    margin-bottom: 20px;
+    padding-bottom: 100%;
+  }
 
   &:hover,
   &:focus {
@@ -78,11 +95,16 @@
   }
 
   img {
-    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
 
     vertical-align: bottom;
     line-height: 100%;
-    object-fit: contain;
+    object-fit: cover;
 
     transition-property: opacity;
     transition-duration: 0.3s;
@@ -108,6 +130,14 @@
   transition-property: opacity;
   transition-duration: 0.3s;
 
+  @media (max-width: $tablet) {
+    font-size: 16px;
+  }
+
+  @media (max-width: $mobile) {
+    color: #6a28a8;
+  }
+
   &:hover,
   &:focus {
     text-decoration: underline;
@@ -129,6 +159,11 @@
 
   transition-property: opacity;
   transition-duration: 0.3s;
+
+  @media (max-width: $tablet) {
+    font-size: 18px;
+    line-height: 19.2px;
+  }
 
   &:hover,
   &:focus {
@@ -153,6 +188,28 @@
   margin-top: auto;
 
   border-top: 1px solid #cccccc;
+
+  @media (max-width: $mobile) {
+    padding-top: 2px;
+    min-height: 46px;
+  }
+}
+
+.card__cost {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+
+  @include font-proxima(20px, 1.2, 700, #0f0f0f);
+
+  @media (max-width: $tablet) {
+    font-size: 20px;
+  }
 }
 
 .card__old-cost {
@@ -160,17 +217,32 @@
 
   @include font-proxima(18px, 1.2, 700, $fuchsia);
   text-decoration: line-through;
+  white-space: nowrap;
+
+  @media (max-width: $tablet) {
+    font-size: 18px;
+  }
+
+  @media (max-width: $mobile) {
+    font-size: 16px;
+  }
 }
 
-.card__cost {
+.card__new-cost {
   margin-right: 13px;
 
-  @include font-proxima(20px, 1.2, 700, #0f0f0f);
+  white-space: nowrap;
 }
 
 .card__cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 41px;
+  height: 41px;
   margin: 0 0 0 auto;
-  padding: 14px;
+  padding: 7px;
 
   border: none;
   background-color: transparent;
@@ -196,6 +268,11 @@
   }
 
   svg {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
     fill: $fuchsia;
 
     transition-property: fill;
@@ -211,6 +288,10 @@
 
   transition-property: opacity, color;
   transition-duration: 0.3s, 0.3s;
+
+  @media (max-width: $tablet) {
+    display: none;
+  }
 
   &:hover,
   &:focus {

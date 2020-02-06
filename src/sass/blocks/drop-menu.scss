@@ -8,6 +8,11 @@
 
   background-color: #ffffff;
   border-radius: 2px;
+
+  @media(max-width: $tablet) {
+    width: 550px;
+    padding: 30px 30px 10px;
+  }
 }
 
 .drop-menu__list {
