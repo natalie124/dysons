@@ -9,6 +9,14 @@
   flex-wrap: wrap;
 
   padding: 5.7% 5% 3.25%;
+
+  @media(max-width: $tablet) {
+    justify-content: center;
+  }
+
+  @media(max-width: $mobile) {
+    padding: 12.5%;
+  }
 }
 
 .order-made__img {
@@ -20,7 +28,19 @@
   height: 194px;
   margin: 50px 12.8% 0 0;
 
+  @media(max-width: $tablet) {
+    margin: 0 5% 0 0;
+  }
+
+  @media(max-width: $mobile) {
+    width: 80px;
+    height: 90px;
+    margin: 0 0 35px;
+  }
+
   img {
+    display: block;
+
     width: 100%;
     height: auto;
   }
@@ -34,6 +54,15 @@
 
   max-width: 555px;
   width: 100%;
+
+  @media(max-width: $tablet) {
+    width: 70%;
+  }
+
+  @media(max-width: $mobile) {
+    align-items: center;
+    width: 100%;
+  }
 }
 
 .order-made__title {
@@ -42,6 +71,14 @@
 
   @include font-proxima(48px, 1.2, 700, $black);
   letter-spacing: 0.01em;
+
+  @media(max-width: $mobile) {
+    font-size: 36px;
+    line-height: 30px;
+    text-align: center;
+
+    margin-bottom: 25px;
+  }
 }
 
 .order-made__info {
@@ -55,6 +92,12 @@
   padding: 0;
 
   @include font-proxima(24px, 1.2, 400, $fuchsia);
+
+  @media(max-width: $mobile) {
+    align-items: center;
+
+    margin-bottom: 25px;
+  }
 }
 
 .order-made__number {
@@ -62,6 +105,10 @@
 
   font-size: 36px;
   text-transform: uppercase;
+
+  @media(max-width: $mobile) {
+    font-size: 30px;
+  }
 }
 
 .order-made__text {
@@ -75,6 +122,11 @@
   padding: 0;
 
   @include font-proxima(18px, 20px, 400, $black);
+
+  @media(max-width: $mobile) {
+    align-items: center;
+    text-align: center;
+  }
 }
 
 .order-made__link {

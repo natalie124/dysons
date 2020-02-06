@@ -1989,6 +1989,8 @@ video.cover {
 .page-header {
   width: 100%;
   background-color: #ffffff;
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(29, 33, 36, 0.08);
+          box-shadow: 0px 0px 8px 0px rgba(29, 33, 36, 0.08);
 }
 
 .page-header__top {
@@ -5443,6 +5445,20 @@ video.cover {
   padding: 5.7% 5% 3.25%;
 }
 
+@media (max-width: 1023px) {
+  .order-made__wrapper {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .order-made__wrapper {
+    padding: 12.5%;
+  }
+}
+
 .order-made__img {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5458,7 +5474,22 @@ video.cover {
   margin: 50px 12.8% 0 0;
 }
 
+@media (max-width: 1023px) {
+  .order-made__img {
+    margin: 0 5% 0 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .order-made__img {
+    width: 80px;
+    height: 90px;
+    margin: 0 0 35px;
+  }
+}
+
 .order-made__img img {
+  display: block;
   width: 100%;
   height: auto;
 }
@@ -5481,6 +5512,21 @@ video.cover {
   width: 100%;
 }
 
+@media (max-width: 1023px) {
+  .order-made__content {
+    width: 70%;
+  }
+}
+
+@media (max-width: 767px) {
+  .order-made__content {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+}
+
 .order-made__title {
   margin: 0 0 40px;
   padding: 0;
@@ -5490,6 +5536,15 @@ video.cover {
   font-weight: 700;
   color: #0f0f0f;
   letter-spacing: 0.01em;
+}
+
+@media (max-width: 767px) {
+  .order-made__title {
+    font-size: 36px;
+    line-height: 30px;
+    text-align: center;
+    margin-bottom: 25px;
+  }
 }
 
 .order-made__info {
@@ -5516,10 +5571,25 @@ video.cover {
   color: #b42079;
 }
 
+@media (max-width: 767px) {
+  .order-made__info {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 25px;
+  }
+}
+
 .order-made__number {
   margin: 4px 0;
   font-size: 36px;
   text-transform: uppercase;
+}
+
+@media (max-width: 767px) {
+  .order-made__number {
+    font-size: 30px;
+  }
 }
 
 .order-made__text {
@@ -5544,6 +5614,15 @@ video.cover {
   line-height: 20px;
   font-weight: 400;
   color: #0f0f0f;
+}
+
+@media (max-width: 767px) {
+  .order-made__text {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
 }
 
 .order-made__link {
