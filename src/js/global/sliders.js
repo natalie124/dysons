@@ -50,7 +50,7 @@
         observeParents: true
       });
       var galleryTop = new Swiper(sliderTop, {
-        spaceBetween: 10,
+        spaceBetween: 0,
         observer: true,
         observeParents: true,
         // effect: 'fade',

@@ -12,6 +12,10 @@
   @media(max-width: $tablet) {
     padding: 30px;
   }
+
+  @media(max-width: $mobile) {
+    padding: 0;
+  }
 }
 
 .modal-buy-click__title {
@@ -23,12 +27,30 @@
   padding: 0 0 9px 10px;
 
   @include font-proxima(36px, 1.2, 700, $black);
-  letter-spacing: 0.005px;
+  letter-spacing: 0.005em;
+
+  @media(max-width: $mobile) {
+    padding: 25px 60px 25px 20px;
+    margin-bottom: 0;
+
+    font-size: 24px;
+  }
 
   img {
     display: block;
+
+    width: 30px;
+    height: 40px;
+
     margin-right: 40px;
     margin-top: -10px;
+
+    @media(max-width: $mobile) {
+      width: 21px;
+      height: 28px;
+      margin-right: 20px;
+      margin-top: -5px;
+    }
   }
 }
 
@@ -46,10 +68,16 @@
   @media(max-width: $tablet) {
     justify-content: center;
   }
+
+  @media (max-width: $mobile) {
+    border: none;
+    padding: 0 0 24px;
+  }
 }
 
 .modal-buy-click__slider {
   min-width: 450px;
+  max-width: 570px;
   width: 48.5%;
   height: 48.5%;
 
@@ -57,6 +85,13 @@
     flex-grow: 2;
 
     padding: 15px;
+    margin-bottom: 25px;
+  }
+
+  @media(max-width: $mobile) {
+    width: 100%;
+    min-width: 300px;
+    padding: 0;
   }
 }
 
@@ -66,7 +101,12 @@
   @media(max-width: $tablet) {
     flex-grow: 2;
 
-    padding: 15px;
+    padding: 0;
+  }
+
+  @media(max-width: $mobile) {
+    width: 100%;
+    padding: 0 10px;
   }
 }
 
@@ -86,6 +126,14 @@
 
     &:first-child {
       @include font-proxima(48px, 1, 700, $black);
+
+      @media(max-width: $mobile) {
+        margin-bottom: 30px;
+
+        font-size: 36px;
+        line-height: 36px;
+        letter-spacing: 0.005em;
+      }
     }
   }
 }
@@ -97,8 +145,6 @@
   @include font-proxima(18px, 1.2, 400, #999999);
   letter-spacing: 0.01em;
 }
-
-.modal-buy-click__form form {}
 
 .modal-buy-click__bottom {
   display: flex;
@@ -137,8 +183,17 @@
   padding: 0;
 
   @include font-proxima(36px, 1.2, 700, $black);
+
+   @media(max-width: $mobile) {
+    margin-bottom: 10px;
+  }
 }
 
 .modal-buy-click__btn {
   margin-top: auto;
+
+  @media(max-width: $mobile) {
+    margin-bottom: 10px;
+    width: 100%;
+  }
 }
