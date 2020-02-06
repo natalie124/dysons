@@ -1,3 +1,9 @@
+.cart-content__wrapper {
+  @media (max-width: $mobile) {
+    padding: 0 10px;
+  }
+}
+
 .cart__items {
   width: 100%;
 }
@@ -9,6 +15,12 @@
   padding: 5px 0 0;
 
   border-top: 1px solid #eeeeee;
+
+  @media (max-width: $mobile) {
+    padding: 0;
+
+    border: none;
+  }
 }
 
 .cart-items__item {
@@ -21,6 +33,14 @@
   width: 100%;
   margin-bottom: 5px;
   padding-right: 14.4%;
+
+  @media (max-width: $mobile) {
+    flex-wrap: wrap;
+
+    margin: 0 0 20px;
+    padding: 0;
+    width: 100%;
+  }
 }
 
 .cart-items__info {
@@ -32,6 +52,13 @@
   min-width: 320px;
   width: 100%;
   margin-right: 20px;
+
+  @media (max-width: $mobile) {
+    margin: 0;
+    min-width: 300px;
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
 .cart-items__img {
@@ -41,6 +68,10 @@
 
   transition-property: opacity;
   transition-duration: 0.3s;
+
+  @media (max-width: $mobile) {
+    margin-right: 10px;
+  }
 
   img {
     display: block;
@@ -72,6 +103,15 @@
 
   text-decoration: none;
 
+  @media (max-width: $mobile) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    width: 100%;
+  }
+
   &:hover,
   &:focus {
     opacity: 0.6;
@@ -89,11 +129,26 @@
 }
 
 .cart-items__title {
+  display: inline-block;
+
+  width: 100%;
+
   @include font-proxima(24px, 1.2, 400, #000000);
+
+  @media (max-width: $mobile) {
+    font-size: 18px;
+  }
 }
 
 .cart-items__text {
+  display: inline-block;
+  width: 100%;
+
   @include font-proxima(15px, 1.2, 400, #000000);
+
+  @media (max-width: $mobile) {
+    padding-right: 65px;
+  }
 }
 
 .cart-items__controls {
@@ -102,12 +157,23 @@
   align-items: center;
 
   width: 303px;
+
+  @media (max-width: $mobile) {
+    width: 100%;
+    padding-right: 50px;
+  }
 }
 
 .cart-items__btn {
   position: absolute;
   right: 4%;
   top: calc(50% - 23px);
+
+  @media (max-width: $mobile) {
+    top: auto;
+    bottom: 3px;
+    right: 5px;
+  }
 }
 
 .cart-items__cost {
@@ -116,4 +182,8 @@
 
   @include font-proxima(20px, 1.2, 700, $black);
   letter-spacing: 0.005em;
+
+  @media (max-width: $mobile) {
+    margin-left: 20px;
+  }
 }

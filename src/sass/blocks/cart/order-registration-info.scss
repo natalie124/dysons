@@ -1,12 +1,18 @@
 .order-registration-info {
+  min-width: 343px;
   max-width: 350px;
-  min-width: 320px;
-  width: 100%;
+  width: 31.5%;
   padding: 14px 40px 25px;
 
   background-color: $white;
   border-radius: 2px;
   box-shadow: 0px 0px 50px 0px rgba(180, 32, 121, 0.1);
+
+  @media (max-width: $mobile) {
+    min-width: 300px;
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
 .order-registration-info__item {
