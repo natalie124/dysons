@@ -2,11 +2,16 @@
   max-width: 1110px;
   width: 100%;
 }
+
 .modal-buy-click__container {
   width: 100%;
   padding: 30px 50px;
 
   box-sizing: border-box;
+
+  @media(max-width: $tablet) {
+    padding: 30px;
+  }
 }
 
 .modal-buy-click__title {
@@ -29,7 +34,7 @@
 
 .modal-buy-click__content {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
 
@@ -37,16 +42,32 @@
   margin-bottom: 24px;
 
   border-top: 1px solid #efefef;
+
+  @media(max-width: $tablet) {
+    justify-content: center;
+  }
 }
 
 .modal-buy-click__slider {
-  width: 490px;
-  height: 490px;
-  margin-right: 50px;
+  min-width: 450px;
+  width: 48.5%;
+  height: 48.5%;
+
+  @media(max-width: $tablet) {
+    flex-grow: 2;
+
+    padding: 15px;
+  }
 }
 
 .modal-buy-click__form {
-  width: 450px;
+  width: 44.5%;
+
+  @media(max-width: $tablet) {
+    flex-grow: 2;
+
+    padding: 15px;
+  }
 }
 
 .modal-buy-click__name {
@@ -77,9 +98,7 @@
   letter-spacing: 0.01em;
 }
 
-.modal-buy-click__form form {
-
-}
+.modal-buy-click__form form {}
 
 .modal-buy-click__bottom {
   display: flex;
@@ -92,7 +111,7 @@
 
 .modal-buy-click__text {
   width: 100%;
-  margin:  0 0 15px;
+  margin: 0 0 15px;
   padding: 0;
 
   @include font-proxima(15px, 24px, 400, $black);
@@ -123,4 +142,3 @@
 .modal-buy-click__btn {
   margin-top: auto;
 }
-

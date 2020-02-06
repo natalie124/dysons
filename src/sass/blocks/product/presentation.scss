@@ -1,3 +1,9 @@
+.product-content__wrapper {
+  @media(max-width: $mobile) {
+    padding: 0;
+  }
+}
+
 .presentation {
   display: flex;
   justify-content: flex-start;
@@ -10,10 +16,35 @@
 
 .presentation__gallery {
   width: 50%;
+  min-width: 300px;
   margin: 0 6.8% 70px 0;
+
+  @media(max-width: $tablet) {
+    width: 47%;
+    margin-right: 3%;
+    margin-bottom: 30px;
+  }
+
+  @media(max-width: $mobile) {
+    flex-grow: 2;
+
+    padding: 0 10px;
+    margin: 0 0 30px;
+  }
 }
 
 .presentation__info {
   width: 43.2%;
   margin-bottom: 70px;
+
+  @media(max-width: $tablet) {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+
+  @media(max-width: $mobile) {
+    flex-grow: 2;
+
+    padding: 0 20px;
+  }
 }

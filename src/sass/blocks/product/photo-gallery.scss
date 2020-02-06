@@ -29,6 +29,13 @@
   cursor: pointer;
   outline: none;
 
+  @media(max-width: $mobile) {
+    bottom: 0;
+
+    width: 60px;
+    height: 90px;
+  }
+
   &:hover,
   &:focus {
 
@@ -105,19 +112,21 @@
 .photo-gallery__thumbs {
   position: absolute;
   bottom: 4.323%;
-  /*left: 5.264%;*/
   left: calc(50% - 44.5%);
+
   width: 88%;
   padding: 0 0 2px 0;
 
-
-  /*width: 89.476%;*/
   height: 20.98%;
   margin: 0 auto;
 
   background-color: transparent;
 
   overflow: hidden;
+
+  @media(max-width: $mobile) {
+    display: none;
+  }
 }
 
 .photo-gallery__thumbs-list,

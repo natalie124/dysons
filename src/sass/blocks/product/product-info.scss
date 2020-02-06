@@ -14,6 +14,10 @@
 
   width: 100%;
   margin-bottom: 11px;
+
+  @media(max-width: $tablet) {
+    margin-bottom: 0;
+  }
 }
 
 .product-info__article,
@@ -36,6 +40,10 @@
   vertical-align: baseline;
 
   padding-left: 40px;
+
+  @media(max-width: $tablet) {
+    padding-left: 30px;
+  }
 
   &::before {
     position: absolute;
@@ -64,6 +72,10 @@
 .product-info__parameters {
   width: 100%;
   padding-right: 24%;
+
+  @media(max-width: $tablet) {
+    padding-right: 0;
+  }
 }
 
 .product-info__title {
@@ -72,6 +84,10 @@
   padding: 0;
 
   @include font-proxima(18px, 1.2, 700, $black);
+
+  @media(max-width: $tablet) {
+    margin-bottom: 15px;
+  }
 }
 
 .product-info__list {
@@ -79,6 +95,10 @@
 
   width: 100%;
   margin-bottom: 20px;
+
+  @media(max-width: $tablet) {
+    margin-bottom: 0;
+  }
 }
 
 .product-info__item {
@@ -92,6 +112,10 @@
   padding: 0 50px 0 30px;
 
   @include font-proxima(15px, 16px, 400, #5d5d5d);
+
+  @media(max-width: $tablet) {
+    padding: 0 30px 0 15px;
+  }
 
   &::before {
     position: absolute;
@@ -124,6 +148,12 @@
 
   @include font-proxima(24px, 1.2, 400, $fuchsia);
   text-decoration: line-through;
+
+  @media(max-width: $tablet) {
+    margin: 0 15px 0 0;
+
+    font-size: 21px;
+  }
 }
 
 .product-info__cost {
@@ -131,6 +161,10 @@
   padding: 0;
 
   @include font-proxima(36px, 1.2, 700, $black);
+
+  @media(max-width: $tablet) {
+    font-size: 30px;
+  }
 }
 
 .product-info__btns {
@@ -144,5 +178,6 @@
 }
 
 .product-info__btn {
+  padding: 13px 19px;
   margin-bottom: 10px;
 }

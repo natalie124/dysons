@@ -1,6 +1,10 @@
 .equipment {
   width: 100%;
   padding: 50px 0;
+
+  @media(max-width: $tablet) {
+    padding: 0;
+  }
 }
 
 .equipment__list {
@@ -19,8 +23,24 @@
   flex-wrap: wrap;
 
   width: 32%;
+  min-width: 250px;
   margin-right: 1%;
   margin-bottom: 50px;
+
+  @media (max-width: $tablet) {
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: $mobile) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+
+    min-width: 150px;
+    padding: 0 10px;
+    margin-right: 0;
+  }
 }
 
 .equipment__img {
@@ -32,6 +52,12 @@
 
   overflow: hidden;
 
+  @media (max-width: $mobile) {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
   img {
     display: block;
     vertical-align: top;
@@ -40,6 +66,7 @@
     height: 100%;
   }
 }
+
 .equipment__title {
   display: inline-block;
   vertical-align: middle;
@@ -49,4 +76,8 @@
   padding: 0;
 
   @include font-proxima(18px, 1.2, 400, $black);
+
+  @media (max-width: $mobile) {
+    width: 100%;
+  }
 }

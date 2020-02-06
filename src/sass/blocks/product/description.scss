@@ -11,10 +11,23 @@
     flex-wrap: wrap;
 
     width: 100%;
+
+    @media(max-width: $mobile) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  @media(max-width: $mobile) {
+    padding: 0 10px;
   }
 }
 
 .description__btn {
+
+  @media(max-width: $mobile) {
+    width: 100%;
+    text-align: center;
+  }
 
   label {
     position: relative;
@@ -33,6 +46,20 @@
     background-color: #f6f6f6;
 
     cursor: pointer;
+
+    @media(max-width: $tablet) {
+      padding: 20px 19px 17px 32px;
+    }
+
+    @media(max-width: $mobile) {
+      justify-content: center;
+
+      width: 100%;
+      padding: 20px 50px 20px 30px;
+      margin-right: 0;
+
+      font-size: 18px;
+    }
   }
 
   input:checked+label {
@@ -57,6 +84,15 @@
       transition-duration: 0.3s;
 
       content: "";
+
+      @media(max-width: $tablet) {
+        left: 13px;
+      }
+
+      @media(max-width: $mobile) {
+        left: auto;
+        right: 20px;
+      }
     }
   }
 }
@@ -69,6 +105,8 @@
   flex-wrap: wrap;
 
   padding: 50px 0 50px 15px;
-}
 
-.description__item {}
+  @media (max-width: $mobile) {
+    padding: 30px 10px;
+  }
+}
