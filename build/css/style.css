@@ -1775,7 +1775,7 @@ video.cover {
   resize: none;
 }
 
-.input-item__container {
+.input-item-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1788,7 +1788,7 @@ video.cover {
   width: 100%;
 }
 
-.input-item__container .input-item {
+.input-item-container .input-item {
   width: 46%;
 }
 
@@ -3792,8 +3792,10 @@ video.cover {
           transition-duration: 0.3s;
 }
 
-.categories__link svg {
-  fill: #b42079;
+.categories__link img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .categories__link span {
